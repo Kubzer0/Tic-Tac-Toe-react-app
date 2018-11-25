@@ -8,19 +8,19 @@ class Square extends React.Component {
     render() {
       return (
         <button className="square">
-          {/* TODO */}
+          {this.props.value}
         </button>
-      );
+      )
     }
   }
   
   class Board extends React.Component {
     renderSquare(i) {
-      return <Square />;
+      return <Square value={i} />
     }
   
     render() {
-      const status = 'Next player: X';
+      const status = 'Next player: X'
   
       return (
         <div>
@@ -41,7 +41,7 @@ class Square extends React.Component {
             {this.renderSquare(8)}
           </div>
         </div>
-      );
+      )
     }
   }
   
@@ -57,7 +57,7 @@ class Square extends React.Component {
             <ol>{/* TODO */}</ol>
           </div>
         </div>
-      );
+      )
     }
   }
   
@@ -66,7 +66,7 @@ class Square extends React.Component {
   ReactDOM.render(
     <Game />,
     document.getElementById('root')
-  );
+  )
   
 
 
