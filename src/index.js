@@ -6,7 +6,7 @@ import './index.css'
 
 class Square extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
           value: null,
         }
@@ -16,7 +16,7 @@ class Square extends React.Component {
       return (
         <button 
         className="square"
-        onClick ={()=> alert('click')}
+        onClick ={()=> this.setState({value: 'X'})}
         >
           {this.props.value}
         </button>
