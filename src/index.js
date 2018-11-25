@@ -17,7 +17,6 @@ function Square(props) {
 }
 
 class Board extends React.Component {
-
     renderSquare(i) {
         return <Square
             value={this.props.squares[i]}
@@ -27,7 +26,6 @@ class Board extends React.Component {
 
 
     render() {
-
         return (
             <div>
                 <div className="board-row">
@@ -78,7 +76,6 @@ class Game extends React.Component {
         if (calculateWinner(squares) || squares[i]) {
             return
         }
-
         squares[i] = this.state.xIsNext ?
             'X'
             :
@@ -112,14 +109,12 @@ class Game extends React.Component {
                 </li>
             )
         })
-
         let status
         if (winner) {
             status = 'Winner: ' + winner
         } else {
             status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O')
         }
-
         return (
             <div className="game">
                 <div className="game-board">
@@ -157,7 +152,6 @@ function calculateWinner(squares) {
     return null
 }
 
-// ========================================
 
 ReactDOM.render(
     <Game />,
